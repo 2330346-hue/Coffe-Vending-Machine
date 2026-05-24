@@ -1,0 +1,57 @@
+{
+  "machine_name": "Caf\u00e9Bot",
+  "currency_symbol": "\u20b9",
+  "ms_per_level": 600,
+  "arduino_port": "auto",
+  "arduino_baud": 9600,
+  "prices": {
+    "black": 15,
+    "espresso": 20,
+    "cappuccino": 25,
+    "latte": 25,
+    "custom_base": 10,
+    "per_coffee_level": 2,
+    "per_milk_level": 1.5,
+    "per_sugar_level": 0.5,
+    "per_50ml_water": 1
+  },
+  "presets": {
+    "black": {
+      "coffee": 3,
+      "milk": 0,
+      "sugar": 0,
+      "water": 120
+    },
+    "espresso": {
+      "coffee": 5,
+      "milk": 0,
+      "sugar": 0,
+      "water": 80
+    },
+    "cappuccino": {
+      "coffee": 3,
+      "milk": 3,
+      "sugar": 2,
+      "water": 100
+    },
+    "latte": {
+      "coffee": 2,
+      "milk": 4,
+      "sugar": 1,
+      "water": 150
+    }
+  },
+  "water": {
+    "min_ml": 80,
+    "max_ml": 250,
+    "step": 10
+  },
+  "face_recognition_threshold": 0.55,
+  "reset_delay_sec": 5,
+  "idle_timeout_sec": 60,
+  "upi_id": "coffebot@paytm",
+  "upi_name": "Caf\u00e9Bot",
+  "admin_password_hash": "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270",
+  "heater_preheat": true,
+  "simulation_mode": false
+}

@@ -1,0 +1,14 @@
+2026-03-31 03:11:53,364 [INFO] === CaféBot starting ===
+2026-03-31 03:11:53,369 [INFO] Database initialized
+[ WARN:0@0.238] global cap.cpp:480 cv::VideoCapture::open VIDEOIO(DSHOW): backend is generally available but can't be used to capture by index
+[ WARN:0@0.001] global cap_ffmpeg_impl.hpp:1217 open VIDEOIO/FFMPEG: Failed list devices for backend dshow
+2026-03-31 03:11:53,568 [WARNING] Camera not found or returning invalid frames
+2026-03-31 03:11:53,570 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-31 03:11:53,571 [WARNING] Arduino not available — running in simulation mode
+2026-03-31 03:11:53,572 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-31 03:11:53,572 [WARNING] Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-03-31 03:11:53,593 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-31 03:11:53,593 [INFO] [33mPress CTRL+C to quit[0m

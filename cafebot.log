@@ -1,0 +1,631 @@
+2026-03-29 01:06:00,200 [INFO] === CaféBot starting ===
+2026-03-29 01:06:00,247 [INFO] Database initialized
+2026-03-29 01:06:02,967 [INFO] Camera started via OpenCV VideoCapture (640x480)
+2026-03-29 01:06:02,981 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 01:06:02,981 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 01:06:03,044 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 01:06:03,044 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 01:06:54,731 [INFO] 127.0.0.1 - - [29/Mar/2026 01:06:54] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:07:15,340 [ERROR] Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\OneDrive\Documents\CVM_2\app.py", line 806, in index
+    return render_template("index.html",
+        machine_name     = config.get("machine_name", "CaféBot"),
+    ...<5 lines>...
+        water_config     = config.get("water",   {}),
+    )
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KIIT0001\AppData\Roaming\Python\Python314\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2026-03-29 01:07:15,364 [INFO] 127.0.0.1 - - [29/Mar/2026 01:07:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-03-29 01:08:13,662 [INFO] === CaféBot starting ===
+2026-03-29 01:08:13,668 [INFO] Database initialized
+2026-03-29 01:08:15,565 [INFO] Camera started via OpenCV VideoCapture (640x480)
+2026-03-29 01:08:15,566 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 01:08:15,566 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 01:08:15,566 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 01:08:15,599 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 01:08:15,599 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 01:09:34,136 [INFO] 127.0.0.1 - - [29/Mar/2026 01:09:34] "GET / HTTP/1.1" 200 -
+2026-03-29 01:09:52,332 [INFO] 127.0.0.1 - - [29/Mar/2026 01:09:52] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:10:45,540 [INFO] 127.0.0.1 - - [29/Mar/2026 01:10:45] "GET / HTTP/1.1" 200 -
+2026-03-29 01:10:45,621 [INFO] 127.0.0.1 - - [29/Mar/2026 01:10:45] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:10:45,688 [INFO] 127.0.0.1 - - [29/Mar/2026 01:10:45] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:10:45,708 [INFO] 127.0.0.1 - - [29/Mar/2026 01:10:45] "GET /api/camera/stream?t=1774726845659 HTTP/1.1" 200 -
+2026-03-29 01:10:45,797 [INFO] 127.0.0.1 - - [29/Mar/2026 01:10:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 01:11:05,709 [INFO] 127.0.0.1 - - [29/Mar/2026 01:11:05] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:11:36,773 [INFO] 127.0.0.1 - - [29/Mar/2026 01:11:36] "GET /api/camera/stream?t=1774726896755 HTTP/1.1" 200 -
+2026-03-29 01:11:40,097 [INFO] 127.0.0.1 - - [29/Mar/2026 01:11:40] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:23:29,146 [INFO] === CaféBot starting ===
+2026-03-29 01:23:29,180 [INFO] Database initialized
+2026-03-29 01:23:31,288 [INFO] Camera started via OpenCV VideoCapture (640x480)
+2026-03-29 01:23:31,292 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 01:23:31,292 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 01:23:31,295 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 01:23:31,335 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 01:23:31,337 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 01:24:32,088 [INFO] 127.0.0.1 - - [29/Mar/2026 01:24:32] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:24:32,111 [INFO] Registered: DemoUser (id=1)
+2026-03-29 01:24:32,124 [INFO] 127.0.0.1 - - [29/Mar/2026 01:24:32] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:24:32,180 [INFO] 127.0.0.1 - - [29/Mar/2026 01:24:32] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:25:34,409 [INFO] 127.0.0.1 - - [29/Mar/2026 01:25:34] "POST /api/users/1/auto-dispense HTTP/1.1" 200 -
+2026-03-29 01:27:29,641 [INFO] 127.0.0.1 - - [29/Mar/2026 01:27:29] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:27:33,988 [INFO] 127.0.0.1 - - [29/Mar/2026 01:27:33] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:27:35,900 [INFO] 127.0.0.1 - - [29/Mar/2026 01:27:35] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:28:00,480 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:00] "GET /api/camera/stream?t=1774727880457 HTTP/1.1" 200 -
+2026-03-29 01:28:28,091 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:28] "GET / HTTP/1.1" 200 -
+2026-03-29 01:28:28,227 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:28] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:28:28,232 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:28] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:28:28,234 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:28] "GET /api/camera/stream?t=1774727908144 HTTP/1.1" 200 -
+2026-03-29 01:28:30,630 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:30] "GET / HTTP/1.1" 200 -
+2026-03-29 01:28:30,689 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:30] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:28:30,726 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:30] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:28:30,737 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:30] "GET /api/camera/stream?t=1774727910673 HTTP/1.1" 200 -
+2026-03-29 01:28:36,875 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:28:36,907 [INFO] 127.0.0.1 - - [29/Mar/2026 01:28:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:29:11,584 [INFO] 127.0.0.1 - - [29/Mar/2026 01:29:11] "GET /api/camera/stream?t=1774727951564 HTTP/1.1" 200 -
+2026-03-29 01:30:17,480 [INFO] 127.0.0.1 - - [29/Mar/2026 01:30:17] "GET / HTTP/1.1" 200 -
+2026-03-29 01:30:41,377 [INFO] 127.0.0.1 - - [29/Mar/2026 01:30:41] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:31:01,440 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:01] "GET / HTTP/1.1" 200 -
+2026-03-29 01:31:01,559 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:01] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:31:01,567 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:01] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:31:01,567 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:01] "GET /api/camera/stream?t=1774728061521 HTTP/1.1" 200 -
+2026-03-29 01:31:09,342 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:09] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:31:09,365 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:09] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:31:22,200 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:22] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:31:22,226 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:22] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:31:22,266 [INFO] Registered: rfbbtgtr (id=2)
+2026-03-29 01:31:22,284 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:22] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:31:41,923 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:41] "POST /api/users/2/preferences HTTP/1.1" 200 -
+2026-03-29 01:31:54,633 [INFO] 127.0.0.1 - - [29/Mar/2026 01:31:54] "GET /api/camera/stream?t=1774728114616 HTTP/1.1" 200 -
+2026-03-29 01:32:08,702 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:08] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:32:08,794 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:08] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:32:15,645 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:15] "POST /api/users/2/auto-dispense HTTP/1.1" 200 -
+2026-03-29 01:32:17,930 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:17] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:32:18,013 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:18] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:32:21,906 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:21] "POST /api/users/2/auto-dispense HTTP/1.1" 200 -
+2026-03-29 01:32:48,902 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:48] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:32:48,940 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:48] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:32:48,971 [INFO] Registered: yash (id=3)
+2026-03-29 01:32:48,994 [INFO] 127.0.0.1 - - [29/Mar/2026 01:32:48] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:33:02,802 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:02] "POST /api/users/3/preferences HTTP/1.1" 200 -
+2026-03-29 01:33:12,783 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:12] "GET /api/camera/stream?t=1774728192764 HTTP/1.1" 200 -
+2026-03-29 01:33:17,132 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:17] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:33:17,205 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:17] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:33:33,129 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:33] "GET / HTTP/1.1" 200 -
+2026-03-29 01:33:33,241 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:33] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:33:33,247 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:33] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:33:33,249 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:33] "GET /api/camera/stream?t=1774728213198 HTTP/1.1" 200 -
+2026-03-29 01:33:36,151 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:36] "GET / HTTP/1.1" 200 -
+2026-03-29 01:33:36,258 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:36] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:33:36,259 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:36] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:33:36,260 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:36] "GET /api/camera/stream?t=1774728216191 HTTP/1.1" 200 -
+2026-03-29 01:33:40,298 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:40] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:33:40,366 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:40] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:33:45,095 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:45] "GET / HTTP/1.1" 200 -
+2026-03-29 01:33:45,210 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:45] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:33:45,212 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:45] "GET /api/camera/stream?t=1774728225153 HTTP/1.1" 200 -
+2026-03-29 01:33:57,658 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:57] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:33:57,680 [INFO] 127.0.0.1 - - [29/Mar/2026 01:33:57] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:34:11,395 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:11] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:34:11,460 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:11] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:34:25,910 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:25] "GET /api/camera/stream?t=1774728265892 HTTP/1.1" 200 -
+2026-03-29 01:34:30,291 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:30] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:34:30,322 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:30] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:34:32,382 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:32] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:34:32,412 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:32] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:34:33,696 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:33] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:34:33,753 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:33] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:34:36,053 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:34:36,084 [INFO] 127.0.0.1 - - [29/Mar/2026 01:34:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:25,780 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:25] "GET / HTTP/1.1" 200 -
+2026-03-29 01:35:25,899 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:25] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:35:25,902 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:25] "GET /api/camera/stream?t=1774728325820 HTTP/1.1" 200 -
+2026-03-29 01:35:27,003 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:27] "GET / HTTP/1.1" 200 -
+2026-03-29 01:35:27,124 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:27] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:35:27,125 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:27] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:35:27,131 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:27] "GET /api/camera/stream?t=1774728327043 HTTP/1.1" 200 -
+2026-03-29 01:35:31,694 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:31] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:35:31,745 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:31] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:36,031 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:35:36,061 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:36,981 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:35:37,018 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:37] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:40,331 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:40] "GET / HTTP/1.1" 200 -
+2026-03-29 01:35:40,414 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:40] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:35:40,415 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:40] "GET /api/camera/stream?t=1774728340364 HTTP/1.1" 200 -
+2026-03-29 01:35:42,163 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:42] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:35:42,190 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:42] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:52,684 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:52] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:35:52,721 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:52] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:35:52,763 [INFO] Registered: subhayan1way (id=4)
+2026-03-29 01:35:52,792 [INFO] 127.0.0.1 - - [29/Mar/2026 01:35:52] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:36:04,548 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:04] "POST /api/users/4/preferences HTTP/1.1" 200 -
+2026-03-29 01:36:07,965 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:07] "GET / HTTP/1.1" 200 -
+2026-03-29 01:36:08,043 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:08] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:36:08,043 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:08] "GET /api/camera/stream?t=1774728368005 HTTP/1.1" 200 -
+2026-03-29 01:36:14,934 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:14] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:36:15,105 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:15] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:36:36,254 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:36] "POST /api/users/1/preferences HTTP/1.1" 200 -
+2026-03-29 01:36:41,421 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:41] "GET / HTTP/1.1" 200 -
+2026-03-29 01:36:41,547 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:41] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:36:41,552 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:41] "GET /api/camera/stream?t=1774728401468 HTTP/1.1" 200 -
+2026-03-29 01:36:43,697 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:43] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:36:43,731 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:43] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:36:45,697 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:45] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:36:45,731 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:45] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:36:46,460 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:46] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:36:46,559 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:46] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:36:56,886 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:56] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:36:56,956 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:56] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:36:57,077 [INFO] 127.0.0.1 - - [29/Mar/2026 01:36:57] "POST /api/users/3/auto-dispense HTTP/1.1" 200 -
+2026-03-29 01:51:18,013 [INFO] === CaféBot starting ===
+2026-03-29 01:51:18,046 [INFO] Database initialized
+2026-03-29 01:51:20,117 [INFO] Camera started via OpenCV VideoCapture (640x480)
+2026-03-29 01:51:20,118 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 01:51:20,118 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 01:51:20,119 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 01:51:20,152 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 01:51:20,152 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 01:52:45,366 [INFO] 127.0.0.1 - - [29/Mar/2026 01:52:45] "GET / HTTP/1.1" 200 -
+2026-03-29 01:53:24,394 [INFO] 127.0.0.1 - - [29/Mar/2026 01:53:24] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:53:47,057 [INFO] 127.0.0.1 - - [29/Mar/2026 01:53:47] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:53:47,105 [INFO] Registered: GatewayDemo (id=5)
+2026-03-29 01:53:47,118 [INFO] 127.0.0.1 - - [29/Mar/2026 01:53:47] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:53:51,793 [INFO] 127.0.0.1 - - [29/Mar/2026 01:53:51] "POST /api/users/5/auto-dispense HTTP/1.1" 200 -
+2026-03-29 01:56:25,298 [INFO] 127.0.0.1 - - [29/Mar/2026 01:56:25] "GET / HTTP/1.1" 200 -
+2026-03-29 01:56:33,566 [INFO] 127.0.0.1 - - [29/Mar/2026 01:56:33] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:57:10,985 [INFO] 127.0.0.1 - - [29/Mar/2026 01:57:10] "GET / HTTP/1.1" 200 -
+2026-03-29 01:57:11,023 [INFO] 127.0.0.1 - - [29/Mar/2026 01:57:11] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 01:57:11,099 [INFO] 127.0.0.1 - - [29/Mar/2026 01:57:11] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 01:57:11,100 [INFO] 127.0.0.1 - - [29/Mar/2026 01:57:11] "GET /api/camera/stream?t=1774729631047 HTTP/1.1" 200 -
+2026-03-29 01:58:02,486 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:02] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:58:02,531 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:02] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:58:02,569 [INFO] Registered: subhayan1way (id=6)
+2026-03-29 01:58:02,587 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:02] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 01:58:15,256 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:15] "POST /api/users/6/preferences HTTP/1.1" 200 -
+2026-03-29 01:58:18,880 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:18] "GET /api/camera/stream?t=1774729698854 HTTP/1.1" 200 -
+2026-03-29 01:58:58,164 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:58] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:58:58,193 [INFO] 127.0.0.1 - - [29/Mar/2026 01:58:58] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:59:17,107 [INFO] 127.0.0.1 - - [29/Mar/2026 01:59:17] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:59:17,131 [INFO] 127.0.0.1 - - [29/Mar/2026 01:59:17] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 01:59:41,594 [INFO] 127.0.0.1 - - [29/Mar/2026 01:59:41] "GET /api/camera/stream?t=1774729781554 HTTP/1.1" 200 -
+2026-03-29 01:59:45,462 [INFO] 127.0.0.1 - - [29/Mar/2026 01:59:45] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 01:59:45,484 [INFO] 127.0.0.1 - - [29/Mar/2026 01:59:45] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:00:41,617 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:41] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:00:41,645 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:41] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:00:43,947 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:43] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:00:43,972 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:43] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:00:44,729 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:44] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:00:44,787 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:00:48,548 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:48] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:00:48,571 [INFO] 127.0.0.1 - - [29/Mar/2026 02:00:48] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:01:36,793 [INFO] 127.0.0.1 - - [29/Mar/2026 02:01:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:01:36,816 [INFO] 127.0.0.1 - - [29/Mar/2026 02:01:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:03:48,653 [INFO] 127.0.0.1 - - [29/Mar/2026 02:03:48] "GET /api/camera/stream?t=1774730028627 HTTP/1.1" 200 -
+2026-03-29 02:03:52,121 [INFO] 127.0.0.1 - - [29/Mar/2026 02:03:52] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:03:52,148 [INFO] 127.0.0.1 - - [29/Mar/2026 02:03:52] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:03:53,244 [INFO] 127.0.0.1 - - [29/Mar/2026 02:03:53] "GET /api/camera/stream?t=1774730033233 HTTP/1.1" 200 -
+2026-03-29 02:13:06,021 [INFO] === CaféBot starting ===
+2026-03-29 02:13:06,029 [INFO] Database initialized
+2026-03-29 02:13:08,225 [INFO] Camera started via OpenCV VideoCapture (640x480)
+2026-03-29 02:13:08,227 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 02:13:08,229 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 02:13:08,230 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 02:13:08,279 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 02:13:08,279 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 02:14:05,774 [INFO] 127.0.0.1 - - [29/Mar/2026 02:14:05] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:14:27,068 [INFO] 127.0.0.1 - - [29/Mar/2026 02:14:27] "GET / HTTP/1.1" 200 -
+2026-03-29 02:15:17,196 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:17] "GET / HTTP/1.1" 200 -
+2026-03-29 02:15:17,236 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:17] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 02:15:17,314 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:17] "GET /api/camera/stream?t=1774730717258 HTTP/1.1" 200 -
+2026-03-29 02:15:17,316 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:17] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:15:20,212 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:20] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:15:20,239 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:20] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:15:26,599 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:26] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:15:26,636 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:26] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:15:26,687 [INFO] Registered: subhayan1way (id=7)
+2026-03-29 02:15:26,704 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:26] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:15:35,315 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:35] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:15:41,343 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:41] "POST /api/users/7/preferences HTTP/1.1" 200 -
+2026-03-29 02:15:47,950 [INFO] 127.0.0.1 - - [29/Mar/2026 02:15:47] "GET /api/camera/stream?t=1774730747941 HTTP/1.1" 200 -
+2026-03-29 02:16:00,697 [INFO] 127.0.0.1 - - [29/Mar/2026 02:16:00] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:16:00,793 [INFO] 127.0.0.1 - - [29/Mar/2026 02:16:00] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:16:08,057 [INFO] 127.0.0.1 - - [29/Mar/2026 02:16:08] "POST /api/users/7/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:16:09,273 [INFO] 127.0.0.1 - - [29/Mar/2026 02:16:09] "GET /api/camera/stream?t=1774730769265 HTTP/1.1" 200 -
+2026-03-29 02:19:16,191 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:16] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:16,524 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:16] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:16,816 [INFO] Registered: yash (id=8)
+2026-03-29 02:19:16,853 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:16] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:19:25,602 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:25] "POST /api/users/8/preferences HTTP/1.1" 200 -
+2026-03-29 02:19:30,793 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:30] "GET /api/camera/stream?t=1774730970777 HTTP/1.1" 200 -
+2026-03-29 02:19:34,342 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:34] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:34,371 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:34] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:36,191 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:36,242 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:37,690 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:37] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:37,723 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:37] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:38,184 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:38] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:38,240 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:38,709 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:38] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:38,742 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:41,107 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:41] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:41,141 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:41] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:43,110 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:43] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:43,152 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:43] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:44,062 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:44] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:44,095 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:19:44,507 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:44] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:19:44,535 [INFO] 127.0.0.1 - - [29/Mar/2026 02:19:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:27,949 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:27] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:27,984 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:27] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:30,234 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:30] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:30,286 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:30] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:34,448 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:34] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:34,484 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:34] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:39,191 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:39] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:39,224 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:39] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:40,106 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:40] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:40,137 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:40] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:46,752 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:46] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:21:46,773 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:46] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:21:46,826 [INFO] Registered: sdutta (id=9)
+2026-03-29 02:21:46,846 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:46] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:21:57,122 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:57] "GET /api/camera/stream?t=1774731117096 HTTP/1.1" 200 -
+2026-03-29 02:21:59,977 [INFO] 127.0.0.1 - - [29/Mar/2026 02:21:59] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:22:00,115 [INFO] 127.0.0.1 - - [29/Mar/2026 02:22:00] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:22:11,001 [INFO] 127.0.0.1 - - [29/Mar/2026 02:22:11] "POST /api/users/9/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:22:12,225 [INFO] 127.0.0.1 - - [29/Mar/2026 02:22:12] "GET /api/camera/stream?t=1774731132206 HTTP/1.1" 200 -
+2026-03-29 02:23:12,285 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:12] "GET / HTTP/1.1" 200 -
+2026-03-29 02:23:12,415 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:12] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 02:23:12,421 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:12] "GET /api/camera/stream?t=1774731192352 HTTP/1.1" 200 -
+2026-03-29 02:23:12,431 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:12] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:23:17,941 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:17] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:23:18,064 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:18] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:23:23,794 [INFO] 127.0.0.1 - - [29/Mar/2026 02:23:23] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:25:39,645 [INFO] 127.0.0.1 - - [29/Mar/2026 02:25:39] "POST /api/users/9/preferences HTTP/1.1" 200 -
+2026-03-29 02:25:48,520 [INFO] 127.0.0.1 - - [29/Mar/2026 02:25:48] "GET /api/camera/stream?t=1774731348499 HTTP/1.1" 200 -
+2026-03-29 02:30:53,236 [INFO] 127.0.0.1 - - [29/Mar/2026 02:30:53] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:31:30,551 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:31:30,556 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:31:30,579 [INFO] Registered: FullRun_1774731690_968 (id=10)
+2026-03-29 02:31:30,593 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:31:30,747 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:31:30,795 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/users/10/preferences HTTP/1.1" 200 -
+2026-03-29 02:31:30,836 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/order HTTP/1.1" 200 -
+2026-03-29 02:31:30,882 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/payment/confirm HTTP/1.1" 200 -
+2026-03-29 02:31:30,920 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:30] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:31:37,769 [INFO] 127.0.0.1 - - [29/Mar/2026 02:31:37] "POST /api/users/10/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:32:07,426 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:07] "GET / HTTP/1.1" 200 -
+2026-03-29 02:32:07,478 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:07] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 02:32:07,545 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:07] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:32:07,546 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:07] "GET /api/camera/stream?t=1774731727492 HTTP/1.1" 200 -
+2026-03-29 02:32:09,111 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:09] "GET / HTTP/1.1" 200 -
+2026-03-29 02:32:09,216 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:09] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:32:09,220 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:09] "GET /api/camera/stream?t=1774731729152 HTTP/1.1" 200 -
+2026-03-29 02:32:12,730 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:12] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:32:12,834 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:12] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:32:19,941 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:19] "POST /api/users/9/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:32:21,159 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:21] "GET /api/camera/stream?t=1774731741149 HTTP/1.1" 200 -
+2026-03-29 02:32:24,625 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:24] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:32:24,732 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:24] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:32:31,875 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:31] "POST /api/users/9/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:32:33,097 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:33] "GET /api/camera/stream?t=1774731753079 HTTP/1.1" 200 -
+2026-03-29 02:32:36,155 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:32:36,285 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:36] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:32:43,519 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:43] "POST /api/users/9/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:32:44,744 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:44] "GET /api/camera/stream?t=1774731764729 HTTP/1.1" 200 -
+2026-03-29 02:32:47,174 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:47] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:32:47,274 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:47] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:32:56,953 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:56] "POST /api/users/9/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:32:58,175 [INFO] 127.0.0.1 - - [29/Mar/2026 02:32:58] "GET /api/camera/stream?t=1774731778165 HTTP/1.1" 200 -
+2026-03-29 02:38:02,580 [INFO] === CaféBot starting ===
+2026-03-29 02:38:02,585 [INFO] Database initialized
+2026-03-29 02:38:05,193 [INFO] Camera started via OpenCV VideoCapture backend=700 (640x480)
+2026-03-29 02:38:05,193 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 02:38:05,194 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 02:38:05,194 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 02:38:05,228 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 02:38:05,229 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 02:38:36,567 [INFO] 127.0.0.1 - - [29/Mar/2026 02:38:36] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:39:10,146 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:10] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:39:10,165 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:10] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:39:12,574 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:12] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:39:12,665 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:12] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:39:18,216 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:18] "POST /api/users/7/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:39:19,428 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:19] "GET /api/camera/stream?t=1774732159421 HTTP/1.1" 200 -
+2026-03-29 02:39:23,592 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:23] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:39:23,678 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:23] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:39:30,237 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:30] "POST /api/users/7/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:39:31,454 [INFO] 127.0.0.1 - - [29/Mar/2026 02:39:31] "GET /api/camera/stream?t=1774732171443 HTTP/1.1" 200 -
+2026-03-29 02:40:06,891 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:06] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:40:06,918 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:06] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:40:27,093 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:27] "GET /api/camera/stream?t=1774732227063 HTTP/1.1" 200 -
+2026-03-29 02:40:38,340 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:38] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:40:38,366 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:40:38,422 [INFO] Registered: ghannu (id=11)
+2026-03-29 02:40:38,448 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:38] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:40:45,392 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:45] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:40:47,502 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:47] "POST /api/users/11/preferences HTTP/1.1" 200 -
+2026-03-29 02:40:53,990 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:53] "GET /api/camera/stream?t=1774732253980 HTTP/1.1" 200 -
+2026-03-29 02:40:56,644 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:56] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:40:56,842 [INFO] 127.0.0.1 - - [29/Mar/2026 02:40:56] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:41:05,320 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:05] "POST /api/users/11/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:41:06,539 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:06] "GET /api/camera/stream?t=1774732266529 HTTP/1.1" 200 -
+2026-03-29 02:41:11,100 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:11] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:41:11,125 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:11] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:41:17,590 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:17] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:41:17,610 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:17] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:41:18,786 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:18] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:41:18,812 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:18] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:41:19,089 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:19] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:41:19,112 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:19] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:41:19,312 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:19] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:41:19,329 [INFO] 127.0.0.1 - - [29/Mar/2026 02:41:19] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:31,250 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:31] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:31,644 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:31] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:34,606 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:34] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:34,645 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:34] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:35,645 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:35] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:35,794 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:35] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:37,610 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:37] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:38,794 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:40,611 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:40] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:41,247 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:41] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:51,358 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:51] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:46:51,901 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:51] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:46:51,990 [INFO] Registered: 2330346 (id=12)
+2026-03-29 02:46:52,024 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:52] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:46:59,123 [INFO] 127.0.0.1 - - [29/Mar/2026 02:46:59] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:47:09,738 [INFO] 127.0.0.1 - - [29/Mar/2026 02:47:09] "POST /api/users/12/preferences HTTP/1.1" 200 -
+2026-03-29 02:47:15,776 [INFO] 127.0.0.1 - - [29/Mar/2026 02:47:15] "GET /api/camera/stream?t=1774732635585 HTTP/1.1" 200 -
+2026-03-29 02:48:41,552 [INFO] === CaféBot starting ===
+2026-03-29 02:48:41,591 [INFO] Database initialized
+2026-03-29 02:48:44,138 [INFO] Camera started via OpenCV VideoCapture backend=700 (640x480)
+2026-03-29 02:48:44,139 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 02:48:44,140 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 02:48:44,140 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 02:48:44,177 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 02:48:44,177 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 02:49:22,333 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:22] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:49:39,283 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:49:39,316 [INFO] Registered: AngleCheck_1774732779 (id=13)
+2026-03-29 02:49:39,332 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:49:39,371 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "GET /api/users/13/face-enrollment-status HTTP/1.1" 200 -
+2026-03-29 02:49:39,450 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/users/13/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 02:49:39,525 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/users/13/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 02:49:39,586 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/users/13/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 02:49:39,666 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/users/13/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 02:49:39,742 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/users/13/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 02:49:39,763 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "GET /api/users/13/face-enrollment-status HTTP/1.1" 200 -
+2026-03-29 02:49:39,859 [INFO] 127.0.0.1 - - [29/Mar/2026 02:49:39] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:50:26,104 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:26] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:50:26,262 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:26] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:50:31,698 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:31] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:50:31,723 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:31] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:50:31,813 [INFO] Registered: AngleCheck_1774732779 (id=14)
+2026-03-29 02:50:31,850 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:31] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:50:34,347 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:34] "POST /api/users/13/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:50:35,572 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:35] "GET /api/camera/stream?t=1774732835562 HTTP/1.1" 200 -
+2026-03-29 02:50:38,315 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:38] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:50:38,474 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:50:47,970 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:47] "POST /api/users/14/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:50:49,188 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:49] "GET /api/camera/stream?t=1774732849176 HTTP/1.1" 200 -
+2026-03-29 02:50:58,600 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:58] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:50:58,750 [INFO] 127.0.0.1 - - [29/Mar/2026 02:50:58] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:51:07,744 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:07] "POST /api/users/14/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:51:08,974 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:08] "GET /api/camera/stream?t=1774732868960 HTTP/1.1" 200 -
+2026-03-29 02:51:13,936 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:13] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:51:13,959 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:13] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:51:19,429 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:19] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:51:19,674 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:19] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:51:20,074 [INFO] Registered: sdutta (id=15)
+2026-03-29 02:51:20,354 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:20] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:51:27,541 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:27] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:51:30,029 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:30] "POST /api/users/15/preferences HTTP/1.1" 200 -
+2026-03-29 02:51:36,349 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:36] "GET /api/camera/stream?t=1774732896315 HTTP/1.1" 200 -
+2026-03-29 02:51:39,680 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:39] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:51:39,849 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:39] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:51:47,738 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:47] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:51:47,866 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:47] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:51:49,878 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:49] "POST /api/users/14/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:51:51,100 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:51] "GET /api/camera/stream?t=1774732911093 HTTP/1.1" 200 -
+2026-03-29 02:51:51,467 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:51] "[33mPOST /api/users/null/auto-dispense HTTP/1.1[0m" 404 -
+2026-03-29 02:51:55,499 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:55] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:51:55,642 [INFO] 127.0.0.1 - - [29/Mar/2026 02:51:55] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:52:03,178 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:03] "POST /api/users/14/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:52:04,403 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:04] "GET /api/camera/stream?t=1774732924383 HTTP/1.1" 200 -
+2026-03-29 02:52:09,588 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:09] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:52:09,749 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:09] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:52:18,830 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:18] "POST /api/users/15/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:52:20,065 [INFO] 127.0.0.1 - - [29/Mar/2026 02:52:20] "GET /api/camera/stream?t=1774732940048 HTTP/1.1" 200 -
+2026-03-29 02:53:32,250 [INFO] === CaféBot starting ===
+2026-03-29 02:53:32,309 [INFO] Database initialized
+2026-03-29 02:53:35,252 [INFO] Camera started via OpenCV VideoCapture backend=700 (640x480)
+2026-03-29 02:53:35,253 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 02:53:35,253 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 02:53:35,254 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 02:53:35,295 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 02:53:35,296 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 02:54:22,816 [INFO] 127.0.0.1 - - [29/Mar/2026 02:54:22] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:54:43,633 [INFO] 127.0.0.1 - - [29/Mar/2026 02:54:43] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 02:55:23,746 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:23] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:55:23,768 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:23] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:55:28,300 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:28] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:55:28,326 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:28] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:55:31,256 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:31] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:55:31,308 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:31] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:55:32,432 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:32] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:55:32,467 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:32] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:55:44,948 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:44] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:55:44,968 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:55:45,032 [INFO] Registered: Subho (id=1)
+2026-03-29 02:55:45,056 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:45] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 02:55:57,678 [INFO] 127.0.0.1 - - [29/Mar/2026 02:55:57] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 02:56:00,857 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:00] "POST /api/users/1/preferences HTTP/1.1" 200 -
+2026-03-29 02:56:06,468 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:06] "GET /api/camera/stream?t=1774733166461 HTTP/1.1" 200 -
+2026-03-29 02:56:08,831 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:08] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 02:56:08,967 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:08] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 02:56:21,038 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:21] "POST /api/users/1/auto-dispense HTTP/1.1" 200 -
+2026-03-29 02:56:23,089 [INFO] 127.0.0.1 - - [29/Mar/2026 02:56:23] "GET /api/camera/stream?t=1774733183063 HTTP/1.1" 200 -
+2026-03-29 03:29:30,369 [INFO] === CaféBot starting ===
+2026-03-29 03:29:30,387 [INFO] Database initialized
+2026-03-29 03:29:32,453 [INFO] Camera started via OpenCV VideoCapture backend=700 (640x480)
+2026-03-29 03:29:32,454 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-29 03:29:32,454 [WARNING] Arduino not available — running in simulation mode
+2026-03-29 03:29:32,454 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-29 03:29:32,482 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-29 03:29:32,483 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-29 03:29:32,959 [INFO] 127.0.0.1 - - [29/Mar/2026 03:29:32] "GET / HTTP/1.1" 200 -
+2026-03-29 03:29:57,025 [INFO] 127.0.0.1 - - [29/Mar/2026 03:29:57] "GET / HTTP/1.1" 200 -
+2026-03-29 03:29:57,076 [INFO] 127.0.0.1 - - [29/Mar/2026 03:29:57] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 03:29:57,077 [INFO] 127.0.0.1 - - [29/Mar/2026 03:29:57] "GET /api/camera/stream HTTP/1.1" 200 -
+2026-03-29 03:29:57,083 [INFO] 127.0.0.1 - - [29/Mar/2026 03:29:57] "GET /api/camera/stream?t=1774735197071 HTTP/1.1" 200 -
+2026-03-29 03:32:57,779 [INFO] 127.0.0.1 - - [29/Mar/2026 03:32:57] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:32:57,814 [INFO] 127.0.0.1 - - [29/Mar/2026 03:32:57] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:32:57,894 [INFO] Registered: sdutta (id=2)
+2026-03-29 03:32:57,911 [INFO] 127.0.0.1 - - [29/Mar/2026 03:32:57] "POST /api/register HTTP/1.1" 200 -
+2026-03-29 03:32:59,258 [INFO] 127.0.0.1 - - [29/Mar/2026 03:32:59] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:32:59,341 [INFO] 127.0.0.1 - - [29/Mar/2026 03:32:59] "POST /api/users/2/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:00,673 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:00] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:00,754 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:00] "POST /api/users/2/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:02,077 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:02] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:02,153 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:02] "POST /api/users/2/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:03,479 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:03] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:03,555 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:03] "POST /api/users/2/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:04,880 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:04] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:04,967 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:04] "POST /api/users/2/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:04,995 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:04] "GET /api/users/2/face-enrollment-status HTTP/1.1" 200 -
+2026-03-29 03:33:12,550 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:12] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 03:33:15,071 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:15] "POST /api/users/2/preferences HTTP/1.1" 200 -
+2026-03-29 03:33:20,500 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:20] "GET /api/camera/stream?t=1774735400493 HTTP/1.1" 200 -
+2026-03-29 03:33:23,838 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:23] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:23,982 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:23] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:33:33,194 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:33] "POST /api/users/2/auto-dispense HTTP/1.1" 200 -
+2026-03-29 03:33:34,412 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:34] "GET /api/camera/stream?t=1774735414399 HTTP/1.1" 200 -
+2026-03-29 03:33:38,697 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:38] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:38,827 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:38] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:33:44,448 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:44] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:44,579 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:33:45,959 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:45] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:46,137 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:46] "POST /api/users/1/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:46,457 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:46] "POST /api/users/2/auto-dispense HTTP/1.1" 200 -
+2026-03-29 03:33:47,485 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:47] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:47,597 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:47] "POST /api/users/1/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:47,689 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:47] "GET /api/camera/stream?t=1774735427670 HTTP/1.1" 200 -
+2026-03-29 03:33:48,935 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:48] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:49,043 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:49] "POST /api/users/1/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:49,879 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:49] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:50,000 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:50] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:33:50,430 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:50] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:50,740 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:50] "POST /api/users/1/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:52,101 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:52] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:33:52,237 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:52] "POST /api/users/1/face-enroll-sample HTTP/1.1" 200 -
+2026-03-29 03:33:52,289 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:52] "GET /api/users/1/face-enrollment-status HTTP/1.1" 200 -
+2026-03-29 03:33:56,923 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:56] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 03:33:59,149 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:59] "POST /api/users/1/preferences HTTP/1.1" 200 -
+2026-03-29 03:33:59,559 [INFO] 127.0.0.1 - - [29/Mar/2026 03:33:59] "POST /api/users/1/preferences HTTP/1.1" 200 -
+2026-03-29 03:34:04,758 [INFO] 127.0.0.1 - - [29/Mar/2026 03:34:04] "GET /api/camera/stream?t=1774735444749 HTTP/1.1" 200 -
+2026-03-29 03:36:11,389 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:11] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:36:11,492 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:11] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:36:23,518 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:23] "POST /api/payment/qr HTTP/1.1" 200 -
+2026-03-29 03:36:25,595 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:25] "POST /api/users/2/preferences HTTP/1.1" 200 -
+2026-03-29 03:36:31,030 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:31] "GET /api/camera/stream?t=1774735591022 HTTP/1.1" 200 -
+2026-03-29 03:36:33,388 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:33] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:36:33,503 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:33] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:36:43,893 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:43] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:36:44,039 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:44] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-29 03:36:47,014 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:47] "POST /api/users/1/auto-dispense HTTP/1.1" 200 -
+2026-03-29 03:36:48,237 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:48] "GET /api/camera/stream?t=1774735608224 HTTP/1.1" 200 -
+2026-03-29 03:36:53,843 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:53] "POST /api/users/1/auto-dispense HTTP/1.1" 200 -
+2026-03-29 03:36:56,074 [INFO] 127.0.0.1 - - [29/Mar/2026 03:36:56] "GET /api/camera/stream?t=1774735616058 HTTP/1.1" 200 -
+2026-03-29 03:37:10,789 [INFO] 127.0.0.1 - - [29/Mar/2026 03:37:10] "GET /api/status HTTP/1.1" 200 -
+2026-03-29 03:37:22,396 [INFO] 127.0.0.1 - - [29/Mar/2026 03:37:22] "POST /api/camera/capture HTTP/1.1" 200 -
+2026-03-29 03:37:22,413 [INFO] 127.0.0.1 - - [29/Mar/2026 03:37:22] "POST /api/face-scan HTTP/1.1" 200 -
+2026-03-31 03:10:59,756 [INFO] === CaféBot starting ===
+2026-03-31 03:10:59,766 [INFO] Database initialized
+2026-03-31 03:11:00,202 [WARNING] Camera not found or returning invalid frames
+2026-03-31 03:11:00,203 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-31 03:11:00,203 [WARNING] Arduino not available — running in simulation mode
+2026-03-31 03:11:00,203 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-31 03:11:00,203 [WARNING] Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-03-31 03:11:00,255 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-31 03:11:00,255 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-31 03:11:21,769 [INFO] === CaféBot starting ===
+2026-03-31 03:11:21,773 [INFO] Database initialized
+2026-03-31 03:11:21,883 [WARNING] Camera not found or returning invalid frames
+2026-03-31 03:11:21,883 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-31 03:11:21,883 [WARNING] Arduino not available — running in simulation mode
+2026-03-31 03:11:21,884 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-31 03:11:21,904 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-31 03:11:21,904 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-31 03:11:53,364 [INFO] === CaféBot starting ===
+2026-03-31 03:11:53,369 [INFO] Database initialized
+2026-03-31 03:11:53,568 [WARNING] Camera not found or returning invalid frames
+2026-03-31 03:11:53,570 [WARNING] ArduinoManager: No Arduino found on any serial port
+2026-03-31 03:11:53,571 [WARNING] Arduino not available — running in simulation mode
+2026-03-31 03:11:53,572 [WARNING]   -> Check USB cable, run: ls /dev/ttyACM* /dev/ttyUSB*
+2026-03-31 03:11:53,572 [WARNING] Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-03-31 03:11:53,593 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.5.78.226:5000
+2026-03-31 03:11:53,593 [INFO] [33mPress CTRL+C to quit[0m
